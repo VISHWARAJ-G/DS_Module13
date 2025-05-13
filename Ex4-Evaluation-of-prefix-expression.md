@@ -77,3 +77,11 @@ int main() {
     printf("Result: %d\n", result);
     return 0;
 }
+```
+## Output:
+```
+Enter Prefix Expression: -+7*45+20
+Result: 25
+```
+## Result:
+Thus, the C program to evaluate the prefix expression using stack and print the output of the given prefix expression from the stack inside the function is implemented successfully.
