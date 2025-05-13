@@ -6,18 +6,18 @@ To write a C program to convert the infix expression into postfix form using sta
 ## Algorithm
 1. Initialize an empty stack to store operators and an empty string to store the resulting postfix expression.
 
-2. Scan the infix expression from left to right:
-2. 1. If the character is an operand (i.e., a number or variable), directly append it to the postfix expression.
-2. 2. If the character is an opening parenthesis ((), push it onto the stack.
-2. 3. If the character is a closing parenthesis ()), pop from the stack to the postfix expression until an opening parenthesis is encountered. Discard the opening parenthesis.
+2. Scan the infix expression from left to right:  
+   i. If the character is an operand (i.e., a number or variable), directly append it to the postfix expression.  
+   ii. If the character is an opening parenthesis `(`, push it onto the stack.  
+   iii. If the character is a closing parenthesis `)`, pop from the stack to the postfix expression until an opening parenthesis is encountered. Discard the opening parenthesis.
 
-3. If the character is an operator (+, -, *, /, ^):
-- While the stack is not empty and the precedence of the top operator on the stack is greater than or equal to the current operator, pop the top operator from the stack and append it to the postfix expression.
-- Push the current operator onto the stack.
+3. If the character is an operator (`+`, `-`, `*`, `/`, `^`):  
+   i. While the stack is not empty and the precedence of the top operator on the stack is greater than or equal to the current operator, pop the top operator from the stack and append it to the postfix expression.  
+   ii. Push the current operator onto the stack.
 
 4. After processing all characters of the infix expression, pop all remaining operators from the stack and append them to the postfix expression.
 
-5. Return the postfix expression, which is now fully constructed.   
+5. Return the postfix expression, which is now fully constructed.
 
 ## Program:
 ```
