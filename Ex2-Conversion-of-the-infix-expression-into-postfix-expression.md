@@ -7,9 +7,9 @@ To write a C program to convert the infix expression into postfix form using sta
 1. Initialize an empty stack to store operators and an empty string to store the resulting postfix expression.
 
 2. Scan the infix expression from left to right:
-- If the character is an operand (i.e., a number or variable), directly append it to the postfix expression.
-- If the character is an opening parenthesis ((), push it onto the stack.
-- If the character is a closing parenthesis ()), pop from the stack to the postfix expression until an opening parenthesis is encountered. Discard the opening parenthesis.
+- 1. If the character is an operand (i.e., a number or variable), directly append it to the postfix expression.
+- 2. If the character is an opening parenthesis ((), push it onto the stack.
+- 3. If the character is a closing parenthesis ()), pop from the stack to the postfix expression until an opening parenthesis is encountered. Discard the opening parenthesis.
 
 3. If the character is an operator (+, -, *, /, ^):
 - While the stack is not empty and the precedence of the top operator on the stack is greater than or equal to the current operator, pop the top operator from the stack and append it to the postfix expression.
